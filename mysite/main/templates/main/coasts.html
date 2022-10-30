@@ -1,0 +1,17 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Цены{% endblock %}
+
+{% block content %}
+    <h1>Цены</h1>
+
+    {% for el in coast %}
+        <div class = "alert alert-warning">
+            <h3>{{ el.branch.branch }}</h3>
+            <p>{{ el.type_of_abonem }}</p>
+            <p>{{ el.coast }} рублей</p>
+<!--            <a href="" class="btn btn-warning">Читать детальнее</a>-->
+        </div>
+    {% endfor %}
+
+{% endblock %}

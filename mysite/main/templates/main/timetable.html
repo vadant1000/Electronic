@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Расписание{% endblock %}
+
+{% block content %}
+    <h1>Расписание</h1>
+
+    {% for el in timetable %}
+        <div class = "alert alert-warning">
+            <h3>{{ el.branch.branch }}</h3>
+            <p>{{ el.group_name }}</p>
+            <p>{{ el.day }}</p>
+            <p>{{ el.time }}</p>
+            <p>{{ el.age }} лет</p>
+<!--            <a href="" class="btn btn-warning">Читать детальнее</a>-->
+        </div>
+    {% endfor %}
+
+{% endblock %}

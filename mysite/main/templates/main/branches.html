@@ -1,0 +1,16 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Филиалы{% endblock %}
+
+{% block content %}
+    <h1>Филиалы</h1>
+
+    {% for el in branch %}
+        <div class = "alert alert-warning">
+            <h3>{{ el.branch }}</h3>
+            <p>{{ el.adress }}</p>
+<!--            <a href="" class="btn btn-warning">Читать детальнее</a>-->
+        </div>
+    {% endfor %}
+
+{% endblock %}
